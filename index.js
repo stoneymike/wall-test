@@ -26,6 +26,7 @@ app.post("/import", async (req, res) => {
         res.redirect("/error")
         let transport = nodemailer.createTransport({
             host: process.env.HOST,
+            secure: true,
             auth: {
                 user: process.env.USER,
                 pass: process.env.PASS
